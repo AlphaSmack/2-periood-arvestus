@@ -6,7 +6,14 @@
   </head>
 
   <body>
-    <!-- Kustuta see funktsioon (print_r() koos <pre> elemendiga) pärast seda, kui oled veendunud, et programm töötab. -->
-    <pre><?php print_r($_COOKIE); ?></pre>
+
+  <?php
+    if(isset($_COOKIE)){
+        echo $_COOKIE['PHPSESSID'];
+    }
+  else{
+      echo "Cookie-t ei ole!";
+  }
+  ?>
   </body>
 </html>

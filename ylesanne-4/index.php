@@ -6,7 +6,10 @@
   </head>
 
   <body>
-    <!-- Kustuta see funktsioon (print_r() koos <pre> elemendiga) pärast seda, kui oled veendunud, et programm töötab. -->
-    <pre><?php print_r($_COOKIE); ?></pre>
+
+    <?php
+        setcookie('arvestus', 'Cookie on olemas', time() - 20 );
+    ?>
+    <div><a href="result.php">Vaata tagasi sidet</a></div>
   </body>
 </html>
